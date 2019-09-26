@@ -1,5 +1,4 @@
 
-
 /**
  * New Relic agent configuration.
  *
@@ -10,7 +9,7 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['Banner Images Proxy'],
+  app_name: ['Banner Images Proxy AWS'],
   /**
    * Your New Relic license key.
    */

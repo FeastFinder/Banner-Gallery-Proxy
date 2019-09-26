@@ -15,7 +15,7 @@ app.use('/:id/', express.static('public'));
 
 app.get('/api/:listing/photos', (req, res) => {
   const { listing } = req.params;
-  axios.get(`http://localhost:3001/api/${listing}/photos`)
+  axios.get(`http://13.57.229.60:3001/api/${listing}/photos`)
     .then((data) => {
       res.status(200).send(data.data);
     })
