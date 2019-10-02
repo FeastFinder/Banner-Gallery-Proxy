@@ -3,19 +3,16 @@
 const newRelic = require('newrelic');
 const express = require('express');
 const axios = require('axios');
-// const bodyParser = require('body-parser');
 
 const app = express();
 
 const port = 3000;
 
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/:id/', express.static('public'));
+app.use('/restaurant/:id/', express.static('public'));
 
 app.get('/api/:listing/photos', (req, res) => {
   const { listing } = req.params;
-  axios.get(`http://localhost:3001/api/${listing}/photos`)
+  axios.get(`http://13.57.229.60:3001/api/${listing}/photos`)
     .then((data) => {
       res.status(200).send(data.data);
     })
