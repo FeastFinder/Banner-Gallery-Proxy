@@ -9,7 +9,6 @@ const app = express();
 const port = 3000;
 
 app.use('/restaurant/:id/', express.static('public'));
-app.use('', express.static('public'));
 
 app.get('/api/:listing/photos', (req, res) => {
   const { listing } = req.params;
